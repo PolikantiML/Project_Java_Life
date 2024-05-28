@@ -10,7 +10,7 @@ public class Star_Pattern_18_5 {
             for (int j = 1; j <= x; j++)
             {
                 if (j<=i-1){
-                    System.out.print(" ");}
+                    System.out.print("  ");}
                 else System.out.print("* ");
 //                if (j>(x-i)){
 //                    System.out.print("*");}
