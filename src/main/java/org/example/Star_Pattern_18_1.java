@@ -10,7 +10,7 @@ public class Star_Pattern_18_1 {
             for (int j = i; j <= x; j++) {
                 System.out.print("* ");
             }
-            System.out.println("");
+            System.out.println(" ");
         }
     }
 }
