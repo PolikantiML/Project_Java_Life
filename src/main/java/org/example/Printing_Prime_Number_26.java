@@ -27,7 +27,6 @@ public class Printing_Prime_Number_26 {
                     if (flag == 1) {
                         System.out.print(j + " ,");
                     }
-
                 }
             }
         }
