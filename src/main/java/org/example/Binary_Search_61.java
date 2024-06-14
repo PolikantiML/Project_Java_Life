@@ -1,12 +1,10 @@
 package org.example;
 
-
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Linear_Search_Programme_60 {
+public class Binary_Search_61 {
     public static void main(String[] args) {
         Integer[] arr = new Integer[20];
         Random ran = new Random();
@@ -26,24 +24,27 @@ public class Linear_Search_Programme_60 {
             System.out.print(arr[i] + " ");
         }
         System.out.println("");
-        Arrays.sort(arr, Collections.reverseOrder());
 
-        System.out.print("Elements in descending order: ");
-        for (int j = 0; j < length; j++) {
-            System.out.print(arr[j] + " ");
-
-        }
-        System.out.println("");
         System.out.print("Enter the element that you wish to find :-");
-        int counter = 0;
         int element = (new Scanner(System.in)).nextInt();
-        for (int i = 0; i < length; i++) {
-            if (element==arr[i]){
-                counter++;
+        System.out.print("Element is "+element);
+        int low = 0;
+        int high = length-1;
+        int mid = (low+high)/2;
+
+        while (low<=high){
+            if (arr[mid]<element){
+                low = mid-1;
+            } else if (arr[mid]>element) {
+                high = mid+1;
+                mid = (low+high)/2;
+            } else if (element==arr[mid]) {
+                System.out.println("Element Found at "+mid+" index");
+                break;
             }
         }
-        if (counter!=0){
-            System.out.println("The Element is there in the array");
+        if (low>high){
+            System.out.println("Element Not Found. ");
         }
     }
 }
