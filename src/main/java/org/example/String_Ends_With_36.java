@@ -7,5 +7,6 @@ public class String_Ends_With_36 {
         System.out.println(s1.endsWith("Krishna")); //true
         System.out.println(s1.endsWith("krishna"));//false
 
+
     }
 }
